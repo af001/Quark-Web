@@ -1,4 +1,4 @@
-angular.module('chirp')
+angular.module('quark')
   .factory('Assets', function($firebaseArray){
     var assetRef = firebase.database().ref('devices');
 

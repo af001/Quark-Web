@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name chirp
+ * @name quark
  * @description
  * # angularfireSlackApp
  *
  * Main module of the application.
  */
 angular
-  .module('chirp', [
+  .module('quark', [
     'firebase',
     'ngMaterial',
     'ngAnimate',

@@ -1,4 +1,4 @@
-angular.module('chirp')
+angular.module('quark')
   .factory('Auth', function($firebaseAuth){
     var auth = $firebaseAuth();
 

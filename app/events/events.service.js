@@ -1,4 +1,4 @@
-angular.module('chirp')
+angular.module('quark')
   .factory('Events', function($firebaseArray){
     var eventRef = firebase.database().ref('events');
 

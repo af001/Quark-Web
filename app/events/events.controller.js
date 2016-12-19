@@ -1,4 +1,4 @@
-angular.module("chirp")
+angular.module("quark")
 .config(function(uiGmapGoogleMapApiProvider) {
 
     uiGmapGoogleMapApiProvider.configure({

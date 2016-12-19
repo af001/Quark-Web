@@ -1,4 +1,4 @@
-angular.module('chirp')
+angular.module('quark')
   .controller('ProfileCtrl', function($mdToast, $state, $scope, md5, auth, profile, $mdSidenav, $mdDialog, $firebase){
     var profileCtrl = this;
 

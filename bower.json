@@ -1,5 +1,5 @@
 {
-  "name": "angularfire-chirp",
+  "name": "angularfire-quark",
   "version": "0.0.0",
   "dependencies": {
     "angular": "^1.5.0",
@@ -15,5 +15,5 @@
     "angular-mocks": "^1.3.0"
   },
   "appPath": "app",
-  "moduleName": "chirp"
+  "moduleName": "quark"
 }

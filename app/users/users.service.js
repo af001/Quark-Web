@@ -1,4 +1,4 @@
-angular.module('chirp')
+angular.module('quark')
   .factory('Users', function($firebaseArray, $firebaseObject){
     var usersRef = firebase.database().ref('users');
     var users = $firebaseArray(usersRef);

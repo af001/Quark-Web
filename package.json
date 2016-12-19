@@ -1,5 +1,5 @@
 {
-  "name": "chirp",
+  "name": "quark",
   "version": "0.0.0",
   "dependencies": {
     "jsdom": "*"

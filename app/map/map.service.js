@@ -1,4 +1,4 @@
-angular.module('chirp')
+angular.module('quark')
   .factory('Locations', function($firebaseArray){
     var locationRef = firebase.database().ref('location');
 

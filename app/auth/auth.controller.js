@@ -1,4 +1,4 @@
-angular.module('chirp')
+angular.module('quark')
   .controller('AuthCtrl', function(Auth, $state){
     var authCtrl = this;
 

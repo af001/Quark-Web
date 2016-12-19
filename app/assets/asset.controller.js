@@ -1,4 +1,4 @@
-angular.module('chirp')
+angular.module('quark')
     .controller('AssetCtrl', function($mdToast, $state, $scope, $mdSidenav, $mdDialog, assets, $firebaseArray, $firebase) {
         var assetCtrl = this;
 
