@@ -1,0 +1,77 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" ng-cloak>
+    <md-toolbar scroll-shrink layout="row">
+        <div class="md-toolbar-tools">
+            <h2>
+         <span>Menu</span>
+       </h2>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="closeSideNavPanel()">
+                <md-tooltip>Close Menu</md-tooltip>
+                <md-icon class="md-default-theme" class="material-icons">&#xE5CD;</md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content layout-padding="">
+        <md-list>
+            <md-subheader class="md-no-sticky">Navigation</md-subheader>
+            <md-list-item md-ink-ripple class="md-clickable" ng-click="goMap()">
+                <md-icon class="md-default-theme" class="material-icons">&#xE1B1;</md-icon>
+                <p>Map</p>
+            </md-list-item>
+            <md-list-item md-ink-ripple class="md-clickable" >
+                <md-icon class="md-default-theme" class="material-icons">&#xE1B1;</md-icon>
+                <p>Assets</p>
+            </md-list-item>
+            <md-list-item md-ink-ripple class="md-clickable" ng-click="events()">
+                <md-icon class="md-default-theme" class="material-icons">&#xE878;</md-icon>
+                <p>Events</p>
+                <md-icon class="md-secondary">2</md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-subheader class="md-no-sticky">Administrative</md-subheader>
+            <md-list-item md-ink-ripple class="md-clickable" ng-click="profile()">
+                <md-icon class="md-default-theme" class="material-icons">&#xE7F9;</md-icon>
+                <p>Profile</p>
+                <div class="md-secondary">2</div>
+            </md-list-item>
+        </md-list>
+    </md-content>
+</md-sidenav>
+
+<div layout="column" layout-fill>
+    <md-toolbar scroll-shrink layout="row">
+        <div class="md-toolbar-tools">
+            <md-button class="md-icon-button" aria-label="Side Panel" ng-click="openSideNavPanel()">
+                <md-tooltip>Side Panel</md-tooltip>
+                <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
+            </md-button>
+            <h2>
+              <span>Quark</span>
+            </h2>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Logout" ng-click="logout()">
+                <md-tooltip>Logout</md-tooltip>
+                <img src="images/logout.png" style="width:24px;height:24px;">
+                </md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content class="md-padding" layout="row" layout-align="center start" layout-xs="column" layout-wrap>
+      <md-card ng-repeat="asset in assetCtrl.assets">
+        <md-card-title md-colors="::{backgroundColor: 'default-primary-700'}" layout="column" layout-align="center center">
+          <md-card-title-text>
+            <span class="md-headline">{{asset.assetName}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-body ng-click="showAdvanced($event, asset.assetName)" class="layout-padding" layout="column" layout-align="center center">
+        <qrcode version="5" error-correction-level="M" size="120" data={{asset.assetName}}></qrcode>
+      </md-card-body>
+      <md-button ng-click="showConfirm($event, asset)">Delete</md-button>
+      <md-button ng-click="open(asset)">History</md-button>
+      </md-card>
+  </md-content>
+</div>
+
+<md-button class="md-fab md-primary md-fab-bottom-right" aria-label="Add" ng-click="addNewDevice($event)">
+  <md-icon class="md-default-theme" class="material-icons">&#xE7FE;</md-icon>
+</md-button>

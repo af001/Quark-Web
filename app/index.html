@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Chirp</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic">
+      <link rel="stylesheet" href="styles/main.css" type="text/css">
+      <link rel="stylesheet" href="styles/signin.css" type="text/css">
+   </head>
+   <body layout="vertical" md-theme="blue" layout-fill ng-app="chirp" >
+     <div layout="column" layout-fill>
+
+      <ui-view></ui-view>
+    </div>
+
+      <!-- build:js(.) scripts/vendor.js -->
+      <!-- bower:js -->
+      <script src="bower_components/angular/angular.js"></script>
+      <script src="bower_components/firebase/firebase.js"></script>
+      <script src="bower_components/angularfire/dist/angularfire.js"></script>
+      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/angular-md5/angular-md5.js"></script>
+      <script src="bower_components/angular-animate/angular-animate.js"></script>
+      <script src="bower_components/angular-aria/angular-aria.js"></script>
+      <script src="bower_components/angular-messages/angular-messages.js"></script>
+      <script src="bower_components/angular-material/angular-material.js"></script>
+      <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+      <script src="bower_components/qrcode-generator/js/qrcode.js"></script>
+      <script src="bower_components/qrcode-generator/js/qrcode_UTF8.js"></script>
+      <script src="bower_components/angular-qrcode/angular-qrcode.js"></script>
+      <script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+      <script src="bower_components/lodash/lodash.js"></script>
+      <script src="bower_components/markerclustererplus/src/markerclusterer.js"></script>
+      <script src="bower_components/google-maps-utility-library-v3-markerwithlabel/dist/markerwithlabel.js"></script>
+      <script src="bower_components/google-maps-utility-library-v3-infobox/dist/infobox.js"></script>
+      <script src="bower_components/google-maps-utility-library-v3-keydragzoom/dist/keydragzoom.js"></script>
+      <script src="bower_components/js-rich-marker/src/richmarker.js"></script>
+      <script src="bower_components/angular-google-maps/dist/angular-google-maps.js"></script>
+      <!-- endbower -->
+      <!-- endbuild -->
+      <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      <script src="app.js"></script>
+      <script src="auth/auth.controller.js"></script>
+      <script src="auth/auth.service.js"></script>
+      <script src="users/users.service.js"></script>
+      <script src="users/profile.controller.js"></script>
+      <script src="map/map.controller.js"></script>
+      <script src="map/map.service.js"></script>
+      <script src="assets/asset.controller.js"></script>
+      <script src="assets/asset.service.js"></script>
+      <script src="events/events.controller.js"></script>
+      <script src="events/events.service.js"></script>
+
+      <!-- endbuild -->
+   </body>
+</html>

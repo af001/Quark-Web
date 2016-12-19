@@ -1,0 +1,72 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" ng-cloak>
+    <md-toolbar scroll-shrink layout="row">
+        <div class="md-toolbar-tools">
+            <h2>
+                <span>Menu</span>
+            </h2>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Close Side Panel" ng-click="closeSideNavPanel()">
+                <md-tooltip>Close Menu</md-tooltip>
+                <md-icon class="md-default-theme" class="material-icons">&#xE5CD;</md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content layout-padding="">
+        <md-list>
+            <md-subheader class="md-no-sticky">Navigation</md-subheader>
+            <md-list-item md-ink-ripple class="md-clickable" ng-click="goMap()">
+                <md-icon class="md-default-theme" class="material-icons">&#xE1B1;</md-icon>
+                <p>Map</p>
+            </md-list-item>
+            <md-list-item md-ink-ripple class="md-clickable" ng-click="assets()">
+                <md-icon class="md-default-theme" class="material-icons">&#xE1B1;</md-icon>
+                <p>Assets</p>
+            </md-list-item>
+            <md-list-item md-ink-ripple class="md-clickable">
+                <md-icon class="md-default-theme" class="material-icons">&#xE878;</md-icon>
+                <p>Events</p>
+                <md-icon class="md-secondary">2</md-icon>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-subheader class="md-no-sticky">Administrative</md-subheader>
+            <md-list-item md-ink-ripple class="md-clickable" ng-click="profile()">
+                <md-icon class="md-default-theme" class="material-icons">&#xE7F9;</md-icon>
+                <p>Profile</p>
+                <div class="md-secondary">2</div>
+            </md-list-item>
+        </md-list>
+    </md-content>
+</md-sidenav>
+
+<div layout="column" layout-fill>
+    <md-toolbar scroll-shrink layout="row">
+        <div class="md-toolbar-tools" flex>
+            <md-button class="md-icon-button" aria-label="Side Panel" ng-click="openSideNavPanel()">
+                <md-tooltip>Side Panel</md-tooltip>
+                <md-icon class="md-default-theme" class="material-icons">&#xE5D2;</md-icon>
+            </md-button>
+            <h2 flex="10">
+                <span>Quark</span>
+            </h2>
+            <md-input-container class="md-accent" flex="20" layout="center center">
+                <md-icon class="md-default-theme" class="material-icons">&#xE8B6;</md-icon>
+                <input ng-model="searchInput" placeholder="Filter" style="color:white;padding-left:10px;margin-left:5px">
+            </md-input-container>
+            <md-button class="md-icon-button" aria-label="Search" ng-click="filter(searchInput)">
+                <md-tooltip>Search</md-tooltip>
+                <md-icon class="material-icons">&#xE163;</md-icon>
+            </md-button>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Logout" ng-click="logout()">
+                <md-tooltip>Logout</md-tooltip>
+                <img src="images/logout.png" style="width:24px;height:24px;"></md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+</div>
+<div>
+    <ui-gmap-google-map center='map.center' v=3 options='map.options' zoom='map.zoom'>
+        <ui-gmap-markers models='markers' idkey='"id"' coords='"coords"' icon='"icon"' title='"title"' fit='true' options='"options"' doCluster='true'>
+        </ui-gmap-markers>
+    </ui-gmap-google-map>
+</div>

@@ -1,0 +1,4 @@
+{
+  "firebase": "chirp",
+  "public": "dist"
+}
