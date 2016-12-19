@@ -1,7 +1,9 @@
 {
   "name": "chirp",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "jsdom": "*"
+  },
   "repository": {},
   "devDependencies": {
     "grunt": "^0.4.5",
