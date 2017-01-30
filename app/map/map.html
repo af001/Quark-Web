@@ -17,6 +17,7 @@
             <md-list-item md-ink-ripple class="md-clickable">
                 <md-icon class="md-default-theme" class="material-icons">&#xE1B1;</md-icon>
                 <p>Map</p>
+                <div class="md-secondary">{{ count-1 }}</div>
             </md-list-item>
             <md-list-item md-ink-ripple class="md-clickable" ng-click="assets()">
                 <md-icon class="md-default-theme" class="material-icons">&#xE1B1;</md-icon>
@@ -25,14 +26,12 @@
             <md-list-item md-ink-ripple class="md-clickable" ng-click="events()">
                 <md-icon class="md-default-theme" class="material-icons">&#xE878;</md-icon>
                 <p>Events</p>
-                <md-icon class="md-secondary">2</md-icon>
             </md-list-item>
             <md-divider></md-divider>
             <md-subheader class="md-no-sticky">Administrative</md-subheader>
             <md-list-item md-ink-ripple class="md-clickable" ng-click="profile()">
                 <md-icon class="md-default-theme" class="material-icons">&#xE7F9;</md-icon>
                 <p>Profile</p>
-                <div class="md-secondary">2</div>
             </md-list-item>
         </md-list>
     </md-content>
@@ -60,6 +59,6 @@
 <div>
     <ui-gmap-google-map center='map.center' v=3 options='map.options' zoom='map.zoom'>
       <ui-gmap-markers models='markers' idkey='"id"' coords='"coords"' icon='"icon"' title='"title"' fit='true' options='"options"' doCluster='true'>
-        </ui-gmap-markers>
+      </ui-gmap-markers>
     </ui-gmap-google-map>
 </div>

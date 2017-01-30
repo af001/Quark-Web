@@ -13,6 +13,7 @@ angular.module("quark")
     $scope.map = {center: {latitude: 40.1451, longitude: -99.6680 }, zoom: 4};
 
     mapCtrl.location = location;
+    mapCtrl.events = events;
     $scope.markers = setMarkers($scope, location);
 
     // uiGmapGoogleMapApi is a promise.
