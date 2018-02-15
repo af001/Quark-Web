@@ -149,11 +149,11 @@ angular
         // "Authentication" section.
 
         var config = {
-            apiKey: "AIzaSyByHNS_AvznSeJnRTDYTv1jEEmGx50_qKI",
-            authDomain: "chirp-f14a6.firebaseapp.com",
-            databaseURL: "https://chirp-f14a6.firebaseio.com",
-            storageBucket: "chirp-f14a6.appspot.com",
-            messagingSenderId: "862116656985"
+            apiKey: "<api_key>",
+            authDomain: "<auth_domain",
+            databaseURL: "<database_url>",
+            storageBucket: "<storage_bucket>",
+            messagingSenderId: "<messaging_sender_id>"
         };
 
         firebase.initializeApp(config);
