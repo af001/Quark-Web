@@ -1,3 +1,3 @@
 # quark
 
-####Quark location tracking web application.
+Quark location tracking web application. Documentation pending.
